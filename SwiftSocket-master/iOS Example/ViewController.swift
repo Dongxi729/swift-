@@ -109,7 +109,10 @@ class ViewController: UIViewController {
     }
     
     func testServer() {
-        let server = TCPServer(address: "192.168.3.4", port: 8411)
+//        let server = TCPServer(address: "192.168.3.4", port: 8411)
+        // 172.168.1.105
+        let server = TCPServer(address: "172.168.1.105", port: 8411)
+        
         
         switch server.listen() {
         case .success:
