@@ -32,11 +32,9 @@ class ViewController: UIViewController {
         
         print("Newclient from:\(client.address)[\(client.port)]")
         
-        DispatchQueue.main.async {
-            self.textView.text = "Newclient from:\(client.address)[\(client.port)]"
-        }
         
         DispatchQueue.main.async {
+            self.textView.text = "Newclient from:\(client.address)[\(client.port)]"
             
             self.timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(self.sendRandomMsg), userInfo: nil, repeats: true)
             
@@ -46,20 +44,22 @@ class ViewController: UIViewController {
         }
         
         while true {
-            
-            var d = client.read(1024*10)
+           
+            let d = client.read(1024 * 10)
+            print("\((#file as NSString).lastPathComponent):(\(#line))\n" + "receivedData:",d?.count as Any)
             
             if d == nil {
                 print("\((#file as NSString).lastPathComponent):(\(#line))\n","断开连接")
                 self.timer.invalidate()
-                
-                
+
                 /// 断开连接后，重置记录常量
                 self.sendToUSerMsg = "888"
                 
                 return
             } else {
-                print(d!)
+//                print(d!)
+                
+//                print("\((#file as NSString).lastPathComponent):(\(#line))\n" + "receivedData:",d?.count as Any)
                 //d?[10] = (d?[10])!+3
                 //let geStr = String(bytes: d!, encoding: String.Encoding.utf8)
                 
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         /// 添加要发送的内容
         data2.append(ndata!)
         
-        guard let socket = client else {
+        guard (client) != nil else {
             return
         }
         
@@ -111,7 +111,9 @@ class ViewController: UIViewController {
     func testServer() {
 //        let server = TCPServer(address: "192.168.3.4", port: 8411)
         // 172.168.1.105
-        let server = TCPServer(address: "172.168.1.105", port: 8411)
+//        let server = TCPServer(address: "172.168.1.105", port: 8411)
+        
+        let server = TCPServer(address: "127.0.0.1", port: 8888)
         
         
         switch server.listen() {
