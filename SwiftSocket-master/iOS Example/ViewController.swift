@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
             let d = client.read(1024 * 10)
             
-            print(d)
+            print(d as Any)
             
             print(d?.count as Any)
             

@@ -315,7 +315,7 @@
 					};
 					375C482C1DDC4C56008C701D = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = E38L2YCTY3;
+						DevelopmentTeam = 64S597X3R9;
 						ProvisioningStyle = Automatic;
 					};
 					377DAA681DCDE40200009697 = {
@@ -544,7 +544,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = E38L2YCTY3;
+				DEVELOPMENT_TEAM = 64S597X3R9;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -569,7 +569,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = E38L2YCTY3;
+				DEVELOPMENT_TEAM = 64S597X3R9;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
